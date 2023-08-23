@@ -30,3 +30,8 @@ Django_Study
     - If you want to check am I located inside VENV or not, just run `django-admin` command to check
 
 5. Start to project with `django-admin startproject config .` command
+
+# How to run server on our developer side
+
+-   Run `python manage.py runserver` command
+-   Then, created a new `db.sqlite3` file
