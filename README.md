@@ -89,7 +89,7 @@ Django_Study
 
 # How to change language and time zone
 
--   Fixed some variables the `settings.py` inside of confie folder as below
+-   Fixed some variables the `settings.py` inside of config folder as below
     ```python
     LANGUAGE_CODE = 'ko-kr'
     TIME_ZONE = 'Asia/Seoul'
