@@ -67,3 +67,20 @@ Django_Study
     Applying sessions.0001_initial... OK
     (django-study-py3.10) parkjaehyeon@bagjaehyeons-MacBook-Pro Django_Study %
     ```
+
+---
+
+# How to create a SuperUser
+
+-   Run `python manage.py createsuperuser` command
+    -   Django has free validation support!!🔥
+    ```
+    (django-study-py3.10) parkjaehyeon@bagjaehyeons-MacBook-Pro Django_Study % python manage.py createsuperuser
+    Username (leave blank to use 'parkjaehyeon'):
+    Email address:
+    Password:
+    Password (again):
+    Superuser created successfully.
+    ```
+-   Then, we get a new admin panel as below
+    ![image](https://github.com/jh0152park/Django_Study/assets/118165975/8656813b-0e8a-4871-8d11-83ccb76bf6fb)
