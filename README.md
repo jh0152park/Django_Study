@@ -84,3 +84,13 @@ Django_Study
     ```
 -   Then, we get a new admin panel as below
     ![image](https://github.com/jh0152park/Django_Study/assets/118165975/8656813b-0e8a-4871-8d11-83ccb76bf6fb)
+
+---
+
+# How to change language and time zone
+
+-   Fixed some variables the `settings.py` inside of confie folder as below
+    ```python
+    LANGUAGE_CODE = 'ko-kr'
+    TIME_ZONE = 'Asia/Seoul'
+    ```
