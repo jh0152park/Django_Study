@@ -94,3 +94,36 @@ Django_Study
     LANGUAGE_CODE = 'ko-kr'
     TIME_ZONE = 'Asia/Seoul'
     ```
+
+---
+
+# How to create a new Application
+
+-   Run `python manage.py startapp [project name]` this command
+    -   Then, literally cratead new project folder
+-   Wirtedown something what we need to `models.py` of created project folder
+
+    ```python
+    from django.db import models
+
+    # Create your models here.
+    class House(models.Model):
+        name = models.CharField(max_length=128)
+        price = models.PositiveIntegerField()
+        description = models.TextField()
+        adress = models.CharField(max_length=128)
+    ```
+
+-   After that, move to `settings.py` of config folder
+-   Add our own new application to `INSTALLED_APPS` as below
+    ```
+    INSTALLED_APPS = [
+        'django.contrib.admin',
+        'django.contrib.auth',
+        'django.contrib.contenttypes',
+        'django.contrib.sessions',
+        'django.contrib.messages',
+        'django.contrib.staticfiles',
+        "house.apps/HouseConfig"
+    ]
+    ```
