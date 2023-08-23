@@ -127,3 +127,26 @@ Django_Study
         "house.apps/HouseConfig"
     ]
     ```
+-   Go to `admin.py` or created folder, then import and register our new model
+
+    ```python
+    from .models import House
+
+    @admin.register(House)
+    class HouseAdmin(admin.ModelAdmin):
+        pass
+    ```
+
+-   Run `python manage.py makemigrations` command to migrate
+    ```
+    Migrations for 'house':
+    house/migrations/0001_initial.py
+        - Create model House
+    ```
+-   Run `python manage.py migrate` to apply our new application to migrate
+    ```
+    Operations to perform:
+    Apply all migrations: admin, auth, contenttypes, house, sessions
+    Running migrations:
+    Applying house.0001_initial... OK
+    ```
