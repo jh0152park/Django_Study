@@ -116,7 +116,7 @@ Django_Study
 
 -   After that, move to `settings.py` of config folder
 -   Add our own new application to `INSTALLED_APPS` as below
-    ```
+    ```python
     INSTALLED_APPS = [
         'django.contrib.admin',
         'django.contrib.auth',
@@ -150,3 +150,8 @@ Django_Study
     Running migrations:
     Applying house.0001_initial... OK
     ```
+
+# We have to do `migration` and `migrate` when we fixed or added something
+
+1. Run `python manage.py makemigrations` command
+2. Run `python manage.py migrate` command

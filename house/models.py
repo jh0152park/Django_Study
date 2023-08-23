@@ -6,3 +6,4 @@ class House(models.Model):
     price = models.PositiveIntegerField()
     description = models.TextField()
     adress = models.CharField(max_length=128)
+    pet_allowed = models.BooleanField(default=False)
