@@ -155,3 +155,57 @@ Django_Study
 
 1. Run `python manage.py makemigrations` command
 2. Run `python manage.py migrate` command
+
+---
+
+# 🔥🔥🔥Most important thing is create custom `User` application at the beginning🔥🔥🔥
+
+1. Create a new `User` application with `python manage.py startapp [name of user]`
+2. Create a new User class at `models.py` of created new folder as belw
+
+    ```python
+    from django.db import models
+    from django.contrib.auth.models import AbstractUser
+
+    # Create your models here.
+
+
+    class User(AbstractUser):
+        pass
+
+    ```
+
+3. Add AUTH config into `settings.py` of config folder as below
+    ```python
+    # AUTH
+    AUTH_USER_MODEL = "users.User" #my app.my class
+    ```
+4. Install our new user application at `settings.py` of config folder as below
+
+    ```python
+    # Application definition
+
+    CUSTOM_APPS = [
+        "house.apps.HouseConfig",
+        "users.apps.Userconfig"
+    ]
+    ```
+
+5. Delete `db.sqlite3` to restart our project and turn off the server
+6. Delete every migration files inside of `migrations` folder, also do not touch the `__init__.py`
+7. Run `python manage.py makemigrations` command to restart server
+8. Run `python manage.py migrate` command
+9. Register new application to admin as below
+
+    ```python
+    from django.contrib import admin
+    from django.contrib.auth.admin import UserAdmin
+    from .models import User
+
+    # Register your models here.
+    @admin.register(User)
+    class CustomUserAdmin(UserAdmin):
+        pass
+    ```
+
+10. Create a new `superuser` again with `python manage.py createsuperuser` command
