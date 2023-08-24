@@ -209,3 +209,9 @@ Django_Study
     ```
 
 10. Create a new `superuser` again with `python manage.py createsuperuser` command
+
+---
+
+# How to run black
+
+-   Run `poetry run black .` command
