@@ -6,8 +6,6 @@ from .models import House
 
 @admin.register(House)
 class HouseAdmin(admin.ModelAdmin):
-    list_display = (
-        "name", "price", "address", "pet_allowed"
-    )
+    list_display = ("name", "price", "address", "pet_allowed")
     list_filter = ("address",)
     search_fields = ("address",)
