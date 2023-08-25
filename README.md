@@ -195,7 +195,7 @@ Django_Study
 6. Delete every migration files inside of `migrations` folder, also do not touch the `__init__.py`
 7. Run `python manage.py makemigrations` command to restart server
 8. Run `python manage.py migrate` command
-9. Register new application to admin as below
+9. Register new application to `admin.py` as below
 
     ```python
     from django.contrib import admin
