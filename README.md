@@ -214,4 +214,12 @@ Django_Study
 
 # How to run black
 
+-   Run `poetry add black` first
 -   Run `poetry run black .` command
+
+---
+
+# 🔥🔥🔥When you need some picutre🔥🔥🔥 
+
+-   Shoutdown server first
+-   Run `poetry add Pillow` command
