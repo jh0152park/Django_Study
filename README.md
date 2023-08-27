@@ -234,9 +234,10 @@ Django_Study
 ---
 
 # ORM (Object Relational Mapping)
-## First run `python manage.py shell` command
+## By default, Django adds a `Manager` with the name `objects` to every Django model class.
+### First run `python manage.py shell` command, if you want to test
 
-### How to get data from our `Room` model?
+## How to get data from our `Room` model?
 ```python
 from rooms.models import Room
 
@@ -258,4 +259,52 @@ room.pk => pk mean is primary key
 room.save() => can update imformation what you want like below
 room.price = 9999
 room.save()
+```
+
+## .all()
+Literally bring me all data
+
+```python
+from rooms.models import Room
+
+Room.objects.all()
+=> then, show you entire rooms
+```
+
+## .get()
+Should only return a one data of model, gonna return `error` when we request more than one results
+
+```python
+Room.objects.get(pk=1)
+```
+
+## .filter()
+Lterally filter, also very similar with filter of JS, but we got a `error` when we search with does not exist property
+
+```python
+Room.objects.filter(pet_allow=True)
+Room.objects.filter(price_per_night__gt=15) # results of price per night over that 15
+Room.objects.filter(price_per_night__gte=15) # results of price per night over that 15 or equal with 15
+Room.objects.filter(price_per_night__lte=15) # results of price per night less that 15 or equal with 15
+Room.objects.filter(name__contain="서울") # Houses whose house names include 서울
+Room.objects.filter(name__startswith="서울") # Houses whose names start with 서울
+```
+
+## .create()
+Literally create some new data
+
+```python
+from rooms.models import Amenity
+
+Amenity.objects.create(name="amenity from console", description="wow")
+```
+
+## .delete()
+Literally delete some data
+
+```python
+from rooms.models import Amenity
+
+Amenity.objects.get(pk=2).delete()
+(1, {'rooms.Amenity': 1})
 ```
