@@ -223,3 +223,10 @@ Django_Study
 
 -   Shoutdown server first
 -   Run `poetry add Pillow` command
+
+---
+
+# ORM 관계 정리
+-   1:1 관계 = OneToOneField
+-   1:Many 관계 = ForeignKey (Many쪽에서 설정함)
+-   Many:Many 관계 = ManyToManyField
