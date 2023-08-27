@@ -308,3 +308,14 @@ from rooms.models import Amenity
 Amenity.objects.get(pk=2).delete()
 (1, {'rooms.Amenity': 1})
 ```
+
+## QuerySet
+QuerySet은 연산자를 함께 묶어주는 역할을 함, filter를 연속으로 2개, 3개 사용하고 싶다면?
+그리고 QuerySet은 실제로 구체적인 데이터를 요청할때에만 데이터를 넘겨줌(그렇지 않으면 너무 많은 부하가 생김)
+
+- `exclude`: 제외하고 싶을때 사용, 아래와 같은 경우 가격이 15보다 아래인것은 제외
+
+```python
+Room.objects.filter(pet_allow=True).exclude(price__lt=15).filter(name__contaions="제주")
+Room.objects.filter(pet_allow=True, name__contains="제주", price__gt=15)
+```
