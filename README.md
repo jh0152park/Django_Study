@@ -230,3 +230,32 @@ Django_Study
 -   1:1 관계 = OneToOneField
 -   1:Many 관계 = ForeignKey (Many쪽에서 설정함)
 -   Many:Many 관계 = ManyToManyField
+
+---
+
+# ORM (Object Relational Mapping)
+## First run `python manage.py shell` command
+
+### How to get data from our `Room` model?
+```python
+from rooms.models import Room
+
+Room.objects.all()
+=> then, show you entire rooms
+
+Room.objects.get([propertys]="")
+room = Room.objects.get(name="Django Room")
+=> then, show you room data if you put correct data
+
+also we can use like below too
+room.[name of property]
+room.name or
+room.country or
+room.owner or
+room.amenity or
+room.pk => pk mean is primary key
+
+room.save() => can update imformation what you want like below
+room.price = 9999
+room.save()
+```
