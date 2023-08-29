@@ -319,3 +319,17 @@ QuerySet은 연산자를 함께 묶어주는 역할을 함, filter를 연속으�
 Room.objects.filter(pet_allow=True).exclude(price__lt=15).filter(name__contaions="제주")
 Room.objects.filter(pet_allow=True, name__contains="제주", price__gt=15)
 ```
+
+# Django REST Framework🔥
+
+## How to install DRF!?
+```
+poetry shell
+poetry add djangorestframework
+```
+Because we using `poetry` to separate our development environment from the other projects.
+If you dont using `peotry`, then just try to install with `pip`
+
+## After install done, what should id do?
+1. go to `setting.py` of `config folder`
+2. put `rest_framework` into `INSTALLED_APPS` list
