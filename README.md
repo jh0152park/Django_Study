@@ -329,6 +329,7 @@ poetry add djangorestframework
 ```
 Because we using `poetry` to separate our development environment from the other projects.
 
+
 If you dont using `peotry`, then just try to install with `pip`
 
 ## After install done, what should id do?
