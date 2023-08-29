@@ -335,3 +335,6 @@ If you dont using `peotry`, then just try to install with `pip`
 ## After install done, what should id do?
 1. go to `setting.py` of `config folder`
 2. put `rest_framework` into `INSTALLED_APPS` list
+
+## Homepage
+https://www.django-rest-framework.org/
