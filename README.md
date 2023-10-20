@@ -7,7 +7,7 @@ Django_Study
 # How to create a new Project
 
 0. Create a new Repository
-1. Create a new VENV project with `peotry init` command
+1. Create a new VENV project with `poetry init` command
     - `Author`: `Your Name`
     - `License`: MIT
     - `Would you like to define your main dependencies interactively? (yes/no)`: No
